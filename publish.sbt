@@ -33,5 +33,3 @@ pomExtra := (
       <email>eiriksletteberg@gmail.com</email>
     </developer>
   </developers>)
-
-homepage := Some(url("https://github.com/eirslett/sbt-slf4j"))
