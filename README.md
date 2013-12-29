@@ -1,9 +1,7 @@
-# sbt-slf4j: A bridge between sbt logger and slf4j
+# A bridge between sbt's plugin logger and SLF4J
 
 You use it with your sbt plugin, so that you can
 include libraries that rely on SLF4J for logging.
-This bridge sets up SBT's logger as implementation
-for SLF4J.
 
 ## Usage
 You have to setup SLF4J in every task implementation.
