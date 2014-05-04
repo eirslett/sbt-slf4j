@@ -2,9 +2,9 @@ name := "sbt-slf4j"
 
 organization := "com.github.eirslett"
 
-version := "0.1"
+version := "0.1.1"
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.10.4"
 
 resolvers += "Typesafe Releases" at "https://repo.typesafe.com/typesafe/releases/"
 
