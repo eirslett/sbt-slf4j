@@ -1,16 +1,16 @@
-publishMavenStyle := true
+import bintray.Plugin._
 
-publishTo := {
-  val nexus = "https://oss.sonatype.org/"
-  if (isSnapshot.value)
-    Some("snapshots" at nexus + "content/repositories/snapshots")
-  else
-    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
-}
+import bintray.Keys._
+
+bintraySettings
+
+publishMavenStyle := true
 
 publishArtifact in Test := false
 
 pomIncludeRepository := { _ => false }
+
+licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0.html"))
 
 pomExtra := (
   <url>https://github.com/eirslett/sbt-slf4j</url>
