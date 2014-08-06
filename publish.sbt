@@ -1,8 +1,9 @@
 import bintray.Plugin._
-
 import bintray.Keys._
 
 bintraySettings
+
+repository in bintray := "maven"
 
 publishMavenStyle := true
 
