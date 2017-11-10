@@ -1,6 +1,6 @@
 package org.slf4j.impl;
 
-import sbt.Logger;
+import sbt.util.Logger;
 
 public final class SbtLoggerAdapter extends AbstractSbtLoggerAdapter {
     public SbtLoggerAdapter(Logger log) {
