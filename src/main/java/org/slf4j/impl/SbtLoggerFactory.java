@@ -5,6 +5,6 @@ import org.slf4j.Logger;
 
 public class SbtLoggerFactory implements ILoggerFactory {
     public Logger getLogger(String name) {
-        return new SbtLoggerAdapter(StaticLoggerBinder.sbtLogger);
+        return new SbtLoggerAdapter(SbtStaticLoggerBinder.sbtLogger);
     }
 }

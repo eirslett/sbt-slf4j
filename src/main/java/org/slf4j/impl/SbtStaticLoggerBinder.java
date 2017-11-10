@@ -2,18 +2,18 @@ package org.slf4j.impl;
 
 import org.slf4j.ILoggerFactory;
 import org.slf4j.spi.LoggerFactoryBinder;
-import sbt.Logger;
+import sbt.util.Logger;
 
-public class StaticLoggerBinder implements LoggerFactoryBinder {
-    public static String REQUESTED_API_VERSION = "1.7"; // !final
+public class SbtStaticLoggerBinder implements LoggerFactoryBinder {
+    public static String REQUESTED_API_VERSION = "1.8"; // !final
 
     public static Logger sbtLogger = null;
 
-    private static final StaticLoggerBinder SINGLETON = new StaticLoggerBinder();
+    private static final SbtStaticLoggerBinder SINGLETON = new SbtStaticLoggerBinder();
 
     private final ILoggerFactory loggerFactory;
 
-    private StaticLoggerBinder(){
+    private SbtStaticLoggerBinder(){
         loggerFactory = new SbtLoggerFactory();
     }
 
@@ -27,7 +27,7 @@ public class StaticLoggerBinder implements LoggerFactoryBinder {
         return SbtLoggerFactory.class.getName();
     }
 
-    public static StaticLoggerBinder getSingleton(){
+    public static SbtStaticLoggerBinder getSingleton(){
         return SINGLETON;
     }
 }
